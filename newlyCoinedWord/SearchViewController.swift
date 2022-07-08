@@ -20,12 +20,20 @@ class SearchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        designTextField(textField: inputTextField)
+        designButton(button: inputButton, UIColor.black)
         
+        for button in buttonCollection {
+            designButton(button: button, UIColor.clear)
+        }
+        
+        designImageView(imageView: backgroundImageView, imageName: "background")
+        designLabel(label: backgroundLabel)
         
     }
     
     func designTextField(textField: UITextField) {
-        textField.placeholder = "내용을 작성해주세요"
+        textField.placeholder = "내용을 입력해주세요"
         textField.font = .systemFont(ofSize: 15)
         textField.textColor = UIColor.black
     }
@@ -35,11 +43,12 @@ class SearchViewController: UIViewController {
         button.backgroundColor = backgroundColor
         button.layer.cornerRadius = 7
         button.layer.borderColor = UIColor.black.cgColor
-        button.layer.borderWidth = 3
+        button.layer.borderWidth = 1
     }
     
-    func designImageView(imageView: UIImageView) {
-        imageView.image = UIImage(named: "background")
+    func designImageView(imageView: UIImageView, imageName: String) {
+        imageView.image = UIImage(named: imageName)
+        
     }
     
     func designLabel(label: UILabel) {
@@ -48,4 +57,7 @@ class SearchViewController: UIViewController {
     }
 
 
+    @IBAction func tapGestureAction(_ sender: Any) {
+        view.endEditing(true)
+    }
 }
