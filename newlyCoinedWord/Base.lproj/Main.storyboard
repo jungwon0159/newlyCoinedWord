@@ -23,6 +23,9 @@
                                         <rect key="frame" x="10" y="8" width="268" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="searchAction:" destination="BYZ-38-t0r" eventType="editingDidEndOnExit" id="41Y-dz-TLd"/>
+                                        </connections>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7An-5X-mzy">
                                         <rect key="frame" x="288" y="10" width="67" height="30"/>
@@ -32,6 +35,9 @@
                                         </constraints>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <connections>
+                                            <action selector="searchAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="u5U-nV-mtK"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -47,7 +53,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OSD-Kb-hmI">
                                 <rect key="frame" x="30" y="129" width="67" height="20"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="jT7-de-HFo"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="35" id="jT7-de-HFo"/>
                                     <constraint firstAttribute="height" constant="20" id="olw-cp-vZG"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
@@ -57,7 +63,7 @@
                                 <rect key="frame" x="102" y="129" width="67" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="EXk-ni-AqY"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="d2G-Gx-M9l"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="35" id="d2G-Gx-M9l"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
@@ -65,7 +71,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DAt-m4-WhT">
                                 <rect key="frame" x="174" y="129" width="67" height="20"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="DYg-Qp-IIS"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="35" id="DYg-Qp-IIS"/>
                                     <constraint firstAttribute="height" constant="20" id="k4b-b2-FUS"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
@@ -74,7 +80,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wBO-eI-csa">
                                 <rect key="frame" x="246" y="129" width="67" height="20"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="JdL-Oq-sI7"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="35" id="JdL-Oq-sI7"/>
                                     <constraint firstAttribute="height" constant="20" id="bXd-T8-NyR"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
@@ -134,7 +140,7 @@
                     <connections>
                         <outlet property="backgroundImageView" destination="Vja-qS-pjk" id="gBX-ir-ZvV"/>
                         <outlet property="backgroundLabel" destination="ejA-97-sNY" id="QJU-uH-bvZ"/>
-                        <outlet property="inputButton" destination="7An-5X-mzy" id="HTC-zp-MPN"/>
+                        <outlet property="inputButton" destination="7An-5X-mzy" id="EEu-GH-d3T"/>
                         <outlet property="inputTextField" destination="njL-OO-8vP" id="aMY-Qd-cGq"/>
                         <outletCollection property="buttonCollection" destination="OSD-Kb-hmI" collectionClass="NSMutableArray" id="ygz-b0-0Wc"/>
                         <outletCollection property="buttonCollection" destination="yzg-oS-dcR" collectionClass="NSMutableArray" id="K6G-Cb-cPm"/>
@@ -145,7 +151,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="CGW-Av-1pK">
                     <connections>
-                        <action selector="tapGestureAction:" destination="BYZ-38-t0r" id="Afb-IU-OuY"/>
+                        <action selector="tapGestureAction:" destination="BYZ-38-t0r" id="RHU-tu-6KO"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>

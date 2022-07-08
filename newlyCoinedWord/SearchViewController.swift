@@ -17,6 +17,10 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var backgroundImageView: UIImageView!
     @IBOutlet weak var backgroundLabel: UILabel!
     
+
+    var neologismDict: [String: String] = ["JMT": "존맛탱", "존버": "존나 버티다", "TMI": "너무 과한 정보", "롬곡": "눈물", "사바사": "사람 바이 사람", "별다줄": "별걸 다 줄인다", "나일리지": "나이 + 마일리지"]
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -59,5 +63,21 @@ class SearchViewController: UIViewController {
 
     @IBAction func tapGestureAction(_ sender: Any) {
         view.endEditing(true)
+    }
+    
+    @IBAction func searchAction(_ sender: Any) {
+        view.endEditing(true)
+        
+        var num = 0
+        
+        for key in neologismDict.keys {
+            if inputTextField.text == key {
+                backgroundLabel.text = neologismDict[key]
+                num += 1
+            }
+            if num == 0 {
+                backgroundLabel.text = "결과 없음"
+            }
+        }
     }
 }
